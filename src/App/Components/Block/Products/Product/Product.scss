@@ -1,0 +1,114 @@
+$DefaultColor: #1698d9;
+$DefaultHoverColor: #2ea8e5;
+$EnableColor: #d91667;
+$DisableColor: #b3b3b3;
+$DisableColorFooter: #ffff66;
+
+.Product {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    
+} 
+
+ .Default {
+     background: white;
+     border: 4px solid $DefaultColor;
+ }
+ .Default:hover {
+    cursor: pointer;
+    border: 4px solid $DefaultHoverColor;
+}
+
+ .Selected{
+    background: white;
+    border: 4px solid $EnableColor;
+}
+
+.Selected :hover {
+    cursor: pointer;
+}
+
+.Disable {
+    background: white;
+    border: 4px solid $DisableColor;
+    color: $DisableColor;
+    cursor: default;
+}
+
+
+.DefaultButton{
+cursor: pointer;
+font-size: 13px;
+color: $DefaultColor;
+border: 0;
+background: transparent;
+}
+
+.NotDefaultButton {
+display: none;
+}
+
+/*********************************************/
+.top_info {
+    font-size: 16px;
+}
+
+.Selected :hover.top_info {
+    color: $EnableColor;
+}
+
+.name {
+    font-size: 48px;
+    font-weight: bold;
+    }
+    
+.taste {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+.middle_info {
+      font-size: 14px;
+    }
+    
+
+
+      
+  .weight {
+   margin-bottom: -30px;
+    background-color: $DefaultColor;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    margin: 10px;
+    margin-left: auto;
+    color: white
+  }
+
+  .weight_value {
+   font-size: 42px;
+  }
+.weight_measure {
+    font-size: 21px;
+}
+  .Default:hover .weight  {
+    background: $DefaultHoverColor;
+  }
+.Selected .weight, .Selected:hover .weight   {
+    background: $EnableColor;
+  }
+
+  .Disable .weight {
+      background: $DisableColor;
+  }
+
+  .ProductFooter {
+      font-size: 13px;
+     color: white;
+  }
+
+ .Disable   .ProductFooter {
+       color: $DisableColorFooter;
+  }

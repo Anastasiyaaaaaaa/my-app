@@ -1,0 +1,9 @@
+.Block {
+    display: flex;
+    flex-direction: column;
+}
+
+ .Header {
+    margin: 0;
+    align-self: center;
+}

@@ -1,0 +1,13 @@
+$DefaultColor: #1698d9;
+$DefaultHoverColor: #2ea8e5;
+$EnableColor: #d91667;
+$DisableColor: #16d998;
+$MainFont: 'Trebuchet MS';
+
+ .Products {
+    margin: 0;
+    align-self: center;
+    display: flex;
+    font-family: $MainFont;
+ }
+
