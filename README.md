@@ -2,8 +2,7 @@ Project Title: "Block with products for website".
 
 Prerequisites: node.js 
 
-Installing: install node_modules
- ### `npm install` 
+Installing: install node_modules by `npm install` 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
