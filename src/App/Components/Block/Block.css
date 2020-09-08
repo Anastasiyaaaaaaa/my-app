@@ -1,9 +1,8 @@
 .Block {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    max-width: 80%;
+   
 }
 
- .Header {
-    margin: 0;
-    align-self: center;
-}

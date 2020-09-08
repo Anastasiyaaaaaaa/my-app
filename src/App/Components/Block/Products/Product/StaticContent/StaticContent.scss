@@ -1,0 +1,85 @@
+@import "./../../../../../utilities/variables.scss";
+
+
+.TextContent {
+    padding: 10px 0 36px 45px;
+}
+
+/*содержание продукта*/
+
+.name {
+    font-size: 48px;
+    font-weight: bold;
+    }
+    
+.taste {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+.middle_info {
+      font-size: 14px;
+      padding-top: 15px;
+      color: $ContentColor;
+    }
+    
+    
+    .ImgContent {
+        z-index: 0; 
+        width: 370px;   
+    
+}
+   
+.weight {
+    background-color: $DefaultColor;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    color: white ;
+     position: absolute;
+     right: 16px;
+     bottom: 16px; 
+     
+  }
+
+  .weightContainer {
+      padding: 5px;
+      padding-bottom: 10px;
+  }
+  .weightContainer .weight_value {
+         font-size: 42px;
+    }
+ 
+ .weightContainer .weight_measure {
+    font-size: 21px; 
+    line-height: 15px;
+    }  
+
+
+  /*содержание продукта в разных состояниях*/
+
+  .Default:hover .weight  {
+    background: $DefaultHoverColor;
+  }
+  
+   .Selected .weight, .Selected:hover .weight   {
+    background: $SelectedColor;
+  }
+
+  .Disable .weight {
+      background: $DisableBorderColor;
+  }
+
+ .Disable .ProductFooter {
+       color: $DisableColorFooter;
+  }
+
+  .Disable img {
+      filter: alpha(Opacity=50);
+    opacity: 0.5; 
+  }
+
+  .Disable .middle_info {
+      color: $DisableColor;
+  }

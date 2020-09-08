@@ -1,6 +1,9 @@
-import CatPhoto from './../images/Photo.png'  
+import CatPhoto from './../App/images/Photo.png'  
 
-const DATA = [
+const DATA = {
+    
+Header : ["Ты сегодня покормил кота?"],
+Products : [
     
     {
         id: '1',
@@ -54,8 +57,10 @@ const DATA = [
         footer_info_selected: 'Филе из цыплят с трюфелями в бульоне.',
         footer_info_disable: 'Печалька, с курой закончился.',
         stocked: "no"
-    }
+    } 
 
 ]
+}
+
 
 export default DATA;

@@ -1,114 +1,111 @@
-$DefaultColor: #1698d9;
-$DefaultHoverColor: #2ea8e5;
-$EnableColor: #d91667;
-$DisableColor: #b3b3b3;
-$DisableColorFooter: #ffff66;
+@import "./../../../../utilities/variables.scss";
+
 
 .Product {
-    margin: 20px;
     display: flex;
-    flex-direction: column;
+    user-select: none;
+    margin: 40px 20px 40px 20px;
+    } 
+ 
+ .BorderProductContent {
+    margin:14px;
+    position: relative;
+    width: 328px;
+    height: 488px;
+    border-radius: 14px;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%, 0 10%);
+    }
     
-} 
-
- .Default {
+ .ProductContent {
+     position: absolute;
      background: white;
-     border: 4px solid $DefaultColor;
- }
- .Default:hover {
-    cursor: pointer;
-    border: 4px solid $DefaultHoverColor;
-}
+     top: 4px;  
+     left: 4px; 
+     width: 320px;  
+     height: 480px; 
+     border-radius: 11px;
+     clip-path: polygon(14.7% 0, 100% 0, 100% 100%, 0 100%, 0 9.7%);
+    }
 
- .Selected{
-    background: white;
-    border: 4px solid $EnableColor;
-}
 
-.Selected :hover {
-    cursor: pointer;
-}
 
-.Disable {
-    background: white;
-    border: 4px solid $DisableColor;
+    /*состояние продукта*/
+
+ .Default .BorderProductContent {
+    background-color: $DefaultColor;
+   }
+
+ .Selected .BorderProductContent {
+    background-color: $SelectedColor;
+   }
+
+  
+ .Disable .BorderProductContent {
+    background-color: $DisableBorderColor;
+   }
+
+ .Disable .ProductContent {
     color: $DisableColor;
     cursor: default;
-}
+    }
+
+ .Default .BorderProductContent:hover {
+    cursor: pointer;
+    background:  $DefaultHoverColor;
+    } 
+
+ .Default .ProductContent:hover, 
+ .Selected .ProductContent:hover {
+    cursor: pointer;
+    }
 
 
-.DefaultButton{
-cursor: pointer;
-font-size: 13px;
-color: $DefaultColor;
-border: 0;
-background: transparent;
-}
 
-.NotDefaultButton {
-display: none;
-}
+/*кнопка*/
 
-/*********************************************/
-.top_info {
+ .DefaultButton{
+    cursor: pointer;
+    font-size: 13px;
+    color: $DefaultColor;
+    border: 0;
+    background: transparent;
+    }
+
+ .DefaultButton:active, .DefaultButton:focus {
+    outline: none;
+  }
+
+ .DefaultButton::-moz-focus-inner {
+    border: 0;
+  }
+
+ .NotDefaultButton {
+    display: none;
+ }
+
+
+
+/*not static content*/
+
+   .ProductFooter {
+    font-size: 13px;
+    color: white;
+    text-align: center;;
+   }
+
+
+   .top_info {
     font-size: 16px;
-}
+    padding: 20px 0 0 45px;
+    color: $ContentColor;
+ 
+   } 
 
-.Selected :hover.top_info {
-    color: $EnableColor;
-}
+   .top_info_selected_hover  {
+    color: $SelectedColor;
+   }
+ 
 
-.name {
-    font-size: 48px;
-    font-weight: bold;
-    }
-    
-.taste {
-      font-size: 24px;
-      font-weight: bold;
-    }
-    
-.middle_info {
-      font-size: 14px;
-    }
-    
-
-
-      
-  .weight {
-   margin-bottom: -30px;
-    background-color: $DefaultColor;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    text-align: center;
-    margin: 10px;
-    margin-left: auto;
-    color: white
-  }
-
-  .weight_value {
-   font-size: 42px;
-  }
-.weight_measure {
-    font-size: 21px;
-}
-  .Default:hover .weight  {
-    background: $DefaultHoverColor;
-  }
-.Selected .weight, .Selected:hover .weight   {
-    background: $EnableColor;
-  }
-
-  .Disable .weight {
-      background: $DisableColor;
-  }
-
-  .ProductFooter {
-      font-size: 13px;
-     color: white;
-  }
-
- .Disable   .ProductFooter {
-       color: $DisableColorFooter;
-  }
+    .Disable .top_info_default {
+      color: $DisableColor;
+   }
