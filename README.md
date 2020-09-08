@@ -1,4 +1,6 @@
+---
 permalink: /index.html
+---
 Project Title: "Block with products for website". 
 
 Prerequisites: node.js 
